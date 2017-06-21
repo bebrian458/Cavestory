@@ -1,0 +1,19 @@
+=====================================================
+Part 2
+=====================================================
+Problem
+=====================================================
+	- We need a windo on the screen to draw out game to
+
+=====================================================
+Details
+=====================================================
+	- We'll have a class dedicated entirely to graphics
+	- Cavestory's resolution is 640x480
+
+=====================================================
+Solution
+=====================================================
+	- Split up headers / implementation files
+	- Create graphics class
+	- Cal it from main (for now)
