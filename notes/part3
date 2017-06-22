@@ -20,3 +20,10 @@ Solution
 	- Create the input class and implement it
 	- Add input to the game loop
 	- Limit FPS
+
+=====================================================
+Next time
+=====================================================
+	- Drawing Quote!
+		- Creating our own Sprite class
+		- Enhancements to the graphics class
