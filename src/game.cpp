@@ -32,16 +32,16 @@ void Game::gameLoop(){
 		input.beginNewFrame();
 
 		if(SDL_PollEvent(&event)){
-			if(event.type == SDL_KEYDOWN){
-				if(event.key.repeat == 0){
-					input.keyDownEvent(event);
-				}
-			}
-			else if(event.type == SDL_KEYUP){
-				input.keyUpEvent(event);
-			}
-			else if(event.type == SDL_QUIT){
-				return;
+			switch(event.type) {
+			    case SDL_KEYDOWN:
+			        if(!event.key.repeat)
+			            input.keyDownEvent(event);
+			        break;
+			    case SDL_KEYUP:
+			        input.keyUpEvent(event);
+			        break;
+			    case SDL_QUIT:
+			        return;
 			}
 		}
 

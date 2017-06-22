@@ -1,8 +1,8 @@
 CC = g++
 FRAMEWORKS = -F/Library/Frameworks -F/System/Library/Frameworks
-LIBFLAGS = -Iheaders -framework SDL2 -framework Cocoa 
+LIBFLAGS = -Ilib -framework SDL2 -framework Cocoa 
 SRC = src
-HEADERS = headers
+HEADERS = lib
 
 CPP = $(SRC)/main.cpp \
 		$(SRC)/game.cpp \
