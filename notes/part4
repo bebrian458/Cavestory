@@ -1,0 +1,36 @@
+=====================================================
+Part 4
+=====================================================
+Problem
+=====================================================
+	- We should put pur comments in the header files
+	- We need to be able to draw things to the screen
+		- More specifically, our character - Quote!
+	- Our graphics class doesn't do much right now
+	- We can't load PNG files just yet
+
+=====================================================
+Details
+=====================================================
+	- Spritesheet for quote - MyChar.png
+	- https://www.libsdl.org/projects/SDL_image/
+	- Allsprites (I think) are scaled by 2 (doubled in size)
+
+=====================================================
+Solution
+=====================================================
+	- Download and add SQL_image to project includes
+	- Convert MyChar.pbm to PNG
+	- Modify graphics class to draw to the screen
+	- Implement a sprite class
+	- Add Some [safe] global variables
+	- Modify game class to draw sprites
+	- Add it all into game to draw the player!
+	
+
+=====================================================
+Next time
+=====================================================
+	- It's time for Quote to move (animations)
+		- AnimatedSprite class
+	- Learn more about how spritesheets work
