@@ -1,0 +1,28 @@
+=====================================================
+Part 5
+=====================================================
+Problem
+=====================================================
+	- We need to animate our sprites
+		- More specifically, for right now, Quote
+
+=====================================================
+Details
+=====================================================
+	- Quote's running animation has 3 frames each
+
+=====================================================
+Solution
+=====================================================
+	- Fix global widdth variable
+	- Create global Vector2 struct
+	- Create the animated sprite class (extends off of sprite)
+	- Use animated sprite in the game class instead of sprite
+	- Watch Quote run endlessly
+	
+
+=====================================================
+Next time
+=====================================================
+	- It's time to make Quote actually move around the screen
+	- Changing Quote's direction (so setting up more animations)
