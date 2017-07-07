@@ -12,7 +12,7 @@ Sprite::Sprite(Graphics &graphics, const std::string &filePath, int sourceX, int
 	this->_sourceRect.x = sourceX;
 	this->_sourceRect.y = sourceY;
 	this->_sourceRect.w = width;
-	this->_sourceRect.h = height;
+    this->_sourceRect.h = height;
 
 
 	this->_spriteSheet = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage(filePath));

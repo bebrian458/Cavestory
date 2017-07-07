@@ -1,12 +1,11 @@
+#include <SDL2/SDL.h>
+#include <SDL2_image/SDL_image.h>
+#include "graphics.h"
+#include "globals.h"
+
 /* Graphics class 
  * Holds all information dealing with graphics for the game
  */
-
-#include <SDL2/SDL.h>
-#include <SDL2_image/SDL_image.h>
-
-#include "graphics.h"
-#include "globals.h"
 
 Graphics::Graphics(){
 	SDL_CreateWindowAndRenderer(globals::SCREEN_WIDTH, globals::SCREEN_HEIGHT, 0, &this->_window, &this->_renderer); // Can remove "this->" 
