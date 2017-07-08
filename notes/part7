@@ -1,0 +1,29 @@
+=====================================================
+Part 5
+=====================================================
+Problem
+=====================================================
+	- We need a way to represent a "Level" or a "Map"
+	- We need to draw a background on the screen
+
+=====================================================
+Details
+=====================================================
+	- Background is bkblue
+	- Backgrounds are 64x64 px
+
+=====================================================
+Solution
+=====================================================
+	- Create the Level Class
+	- Create new directory content/backgrounds
+	- Convert bkblue.pb to bkBlue.png
+	- Add the level to the game class
+	- Fix Quote's transparency
+	
+
+=====================================================
+Next time
+=====================================================
+	- Part 2
+		- Drawing the level in Tiled (and downloading TinyXML2)

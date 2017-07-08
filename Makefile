@@ -6,21 +6,23 @@ LIBFLAGS = -Ilib -framework SDL2 -framework SDL2_image -framework Cocoa
 SRC = src
 HEADERS = lib
 
-CPP = $(SRC)/main.cpp \
-		$(SRC)/game.cpp \
-		$(SRC)/graphics.cpp \
-		$(SRC)/input.cpp \
-		$(SRC)/sprite.cpp \
-		$(SRC)/animatedsprite.cpp \
-		$(SRC)/player.cpp 
-
 H = $(HEADERS)/globals.h \
 		$(HEADERS)/game.h \
 		$(HEADERS)/graphics.h \
 		$(HEADERS)/input.h \
 		$(HEADERS)/sprite.h \
 		$(HEADERS)/animatedsprite.h \
-		$(HEADERS)/player.h
+		$(HEADERS)/player.h \
+		$(HEADERS)/level.h
+
+CPP = $(SRC)/main.cpp \
+		$(SRC)/game.cpp \
+		$(SRC)/graphics.cpp \
+		$(SRC)/input.cpp \
+		$(SRC)/sprite.cpp \
+		$(SRC)/animatedsprite.cpp \
+		$(SRC)/player.cpp \
+		$(SRC)/level.cpp
 
 Default: Cavestory
 
