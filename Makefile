@@ -13,7 +13,8 @@ H = $(HEADERS)/globals.h \
 		$(HEADERS)/sprite.h \
 		$(HEADERS)/animatedsprite.h \
 		$(HEADERS)/player.h \
-		$(HEADERS)/level.h
+		$(HEADERS)/level.h \
+		$(HEADERS)/tinyxml2.h
 
 CPP = $(SRC)/main.cpp \
 		$(SRC)/game.cpp \
@@ -22,7 +23,8 @@ CPP = $(SRC)/main.cpp \
 		$(SRC)/sprite.cpp \
 		$(SRC)/animatedsprite.cpp \
 		$(SRC)/player.cpp \
-		$(SRC)/level.cpp
+		$(SRC)/level.cpp \
+		$(SRC)/tinyxml2.cpp
 
 Default: Cavestory
 
