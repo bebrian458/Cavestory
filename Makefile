@@ -1,37 +1,39 @@
 .SILENT:
 
 CC = g++
+CFLAGS = -c
 FRAMEWORKS = -F/Library/Frameworks -F/System/Library/Frameworks
-LIBFLAGS = -Ilib -framework SDL2 -framework SDL2_image -framework Cocoa 
+LIBFLAGS = -framework SDL2 -framework SDL2_image -framework Cocoa 
 SRC = src
-HEADERS = lib
+LIBS = -Ilib
+OBJDIR = obj
+PGM = Cavestory
 
-H = $(HEADERS)/globals.h \
-		$(HEADERS)/game.h \
-		$(HEADERS)/graphics.h \
-		$(HEADERS)/input.h \
-		$(HEADERS)/sprite.h \
-		$(HEADERS)/animatedsprite.h \
-		$(HEADERS)/player.h \
-		$(HEADERS)/level.h \
-		$(HEADERS)/tinyxml2.h
+OBJECTS = $(addprefix $(OBJDIR)/, \
+		main.o \
+		game.o \
+		graphics.o \
+		input.o \
+		sprite.o \
+		animatedsprite.o \
+		player.o \
+		level.o \
+		tinyxml2.o)
 
-CPP = $(SRC)/main.cpp \
-		$(SRC)/game.cpp \
-		$(SRC)/graphics.cpp \
-		$(SRC)/input.cpp \
-		$(SRC)/sprite.cpp \
-		$(SRC)/animatedsprite.cpp \
-		$(SRC)/player.cpp \
-		$(SRC)/level.cpp \
-		$(SRC)/tinyxml2.cpp
+Default: $(PGM)
 
-Default: Cavestory
+$(PGM): $(OBJECTS)
+	echo "Building executable..."
+	$(CC) -Wall -o $@ $^ $(FRAMEWORKS) $(LIBFLAGS)
 
-Cavestory: $(CPP) $(H)
-	echo Building...
-	$(CC) $(FRAMEWORKS) $(LIBFLAGS) -o $@ $(CPP)
+$(OBJDIR)/%.o: $(SRC)/%.cpp | $(OBJDIR)
+	echo "Building $@..."
+	$(CC) -c $< -o $@ $(LIBS)
+
+$(OBJDIR):
+	echo "Making obj dir for object files..."
+	mkdir $@
 
 clean:
-	echo Removing executable...
-	rm -f Cavestory
+	echo "Removing executable and object files..."
+	rm -rf $(PGM) $(OBJDIR)
