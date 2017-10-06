@@ -9,17 +9,6 @@ LIBS = -Ilib
 OBJDIR = obj
 PGM = Cavestory
 
-# OBJECTS = $(addprefix $(OBJDIR)/, \
-# 		main.o \
-# 		game.o \
-# 		graphics.o \
-# 		input.o \
-# 		sprite.o \
-# 		animatedsprite.o \
-# 		player.o \
-# 		level.o \
-# 		tinyxml2.o)
-
 SOURCES = $(wildcard $(SRCDIR)/*.cpp)
 OBJECTS = $(patsubst $(SRCDIR)/%.cpp, $(OBJDIR)/%.o, $(SOURCES))
 
@@ -31,7 +20,7 @@ $(PGM): $(OBJECTS)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
 	echo "Building $@..."
-	$(CC) -c $< -o $@ $(LIBS)
+	$(CC) -c $< -o $@ $(FRAMEWORKS) $(LIBS)
 
 $(OBJDIR):
 	echo "Making obj dir for object files..."
